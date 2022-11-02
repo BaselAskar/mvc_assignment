@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Test-Fever";
+}
+
+<div class="text-center">
+    <img src="~/assets/doctor_logo.png" alt="doctor" />
+</div>
+
+
+<form class="test-form" method="post">
+    <label for="temp" class="fw-bold">Tempretur: </label>
+    <div class="w-50">
+        <input id="temp" name="temp" class="form-control text-center" type="number" />
+    </div>
+    <button type="submit" class="btn btn-success w-50">check</button>
+
+    @if(ViewBag.Message != null)
+    {
+        <p class="text-danger">@ViewBag.Message</p>
+    }
+</form>
