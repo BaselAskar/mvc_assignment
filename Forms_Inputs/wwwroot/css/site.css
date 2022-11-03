@@ -35,4 +35,5 @@ body {
 
 footer {
     background-color: #32bea6;
+    color:var(--bs-light) !important;
 }

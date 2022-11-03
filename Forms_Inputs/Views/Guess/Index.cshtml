@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Guess";
+}
+
+<div class="text-center py-4">
+    <img width="300px" src="~/assets/guess.png" alt="guess"/>
+</div>
+
+<form method="post" class="test-form">
+    <label for="secret" class="fw-bold">Number: </label>
+    <div class="w-50">
+        <input id="secret" name="number" class="form-control text-center" type="number" />
+    </div>
+    <button class="btn btn-success" type="submit">submit</button>
+</form>
+
+@if(ViewBag.Message != null) 
+{
+    <p class="text-danger text-center">@ViewBag.Message</p>
+}

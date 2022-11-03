@@ -9,6 +9,15 @@ namespace Forms_Inputs
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddMvc();
+
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(1);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -21,6 +30,8 @@ namespace Forms_Inputs
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 

@@ -30,6 +30,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-controller="Doctor" asp-action="Index">Doctor</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-controller="Guess" asp-action="Index">Gussess number</a>
+                        </li>
+
 
                     </ul>
                 </div>
@@ -43,8 +47,8 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Forms_Inputs - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container text-light">
+            &copy; @DateTime.Now.ToString("yyyy-MM-dd") &nbsp; MVC 
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -26,7 +26,7 @@ namespace Forms_Inputs.Controllers
             }
             else
             {
-                ViewBag.Message = FeverResult.Test(temp);
+                ViewBag.Message = Result.Fever(temp);
             }
 
             return View();
